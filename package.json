@@ -1,0 +1,30 @@
+{
+  "name": "odin-weatherapp",
+  "version": "1.0.0",
+  "description": "A simple weather app following the Odin Curriculum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "serve": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanishKodeMonkey/odin-weatherapp.git"
+  },
+  "author": "Daniel Ljung Runge @danishKodeMonkey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanishKodeMonkey/odin-weatherapp/issues"
+  },
+  "homepage": "https://github.com/DanishKodeMonkey/odin-weatherapp#readme",
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  }
+}
