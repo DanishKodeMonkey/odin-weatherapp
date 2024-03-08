@@ -8,6 +8,47 @@
 		<title><%= htmlWebpackPlugin.options.title %></title>
 	</head>
 	<body>
-		<h1>test to see if it implements properly</h1>
+		<header>
+			<span class="header-title">The Odin Weather App!</span>
+			<p class="credits">
+				Powered by
+				<a
+					href="https://www.weatherapi.com/"
+					title="Free Weather API"
+					>WeatherAPI.com</a
+				>
+			</p>
+		</header>
+		<main>
+			<div
+				class="content"
+				id="introduction">
+				<h1>Welcome to the Odin weather app!</h1>
+				<p>
+					The odin weather app is an educational project that can help you find
+					various information about the weather!
+				</p>
+				<p>
+					Fill out the form below for more information about the current
+					weather:
+				</p>
+				<form>
+					<label for="country">Country:</label
+					><input
+						type="text"
+						required /><input
+						type="button"
+						value="Submit" />
+				</form>
+			</div>
+			<div
+				class="weatherData"
+				id="weather"></div>
+		</main>
+		<footer>
+			Created by Daniel Ljung Runge
+			<a href="https://github.com/DanishKodeMonkey">@danishKodeMonkey</a> on
+			github
+		</footer>
 	</body>
 </html>
