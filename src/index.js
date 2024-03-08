@@ -1,5 +1,26 @@
 import '@fontsource-variable/josefin-sans'
+import '@fontsource-variable/noto-serif'
 import './style.css'
+const submitBtn = document.getElementById('submit-button')
+
+submitBtn.addEventListener('click', () => getWeather())
+// Function handles rendering the weather in DOM
+async function getWeather() {
+	try {
+		const location = document.querySelector('#country').value
+		const weatherObj = await processWeatherData(location)
+		renderDOM(weatherObj)
+		/* const weatherObj = await processWeatherData(location) */
+	} catch (err) {
+		console.log('ERROR getLocatioNWeather', err)
+	}
+}
+function renderDOM(weatherObj) {
+	// Location elements
+	const weatherLocationCont = document.createElement('div')
+	const weatherLocationTitle = document.createElement('p')
+	weatherLocationTitle.textContent = 'Location'
+}
 
 async function fetchWeatherData(location) {
 	const response = await fetch(
@@ -36,14 +57,5 @@ async function processWeatherData(location) {
 		return weatherObj
 	} catch (err) {
 		console.log('ERROR: ', err)
-	}
-}
-
-async function getWeather(location) {
-	try {
-		const weatherObj = await processWeatherData(location)
-		console.log(weatherObj)
-	} catch (err) {
-		console.log('ERROR getLocatioNWeather', err)
 	}
 }

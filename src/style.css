@@ -2,8 +2,11 @@
     --main-bg-color: #f0f9ff;
     --secondary-bg-color: #60a5fa;
     --tertiary-bg-color: #bae6fd;
-    --title-font-size: clamp(20px, 2vw, 300px);
+    --title-font-size: clamp(20px, 2.5vw, 300px);
     --subtitle-font-size: clamp(10px, 0.8vw, 100px);
+    --normal-font-size: clamp(12px, 1vw, 20px);
+    --primary-font-family: 'Josefin Sans Variable', sans-serif;
+    --secondary-font-family: 'Noto Serif Variable', serif;
     
 }
 
@@ -26,7 +29,7 @@ header{
     flex-direction: column;
     align-items: center;
     background-color: var(--secondary-bg-color);
-    font-family:'Josefin Sans Variable', sans-serif;
+    font-family:var(--primary-font-family);
     >.header-title{
         font-size: var(--title-font-size);
         font-weight: 900;
@@ -41,11 +44,88 @@ header{
 }
 
 main{
-    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    >.content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+        font-family:var(--secondary-font-family);
+        >h1{
+            text-align: center;
+            font-size: var(--title-font-size);
+        }
+        >p{ 
+            text-align: center;
+            font-size: var(--normal-font-size);
+        }
+        >form{
+        display: flex;
+
+        >.input-container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    }
+
+}
+.weather-data{
+    display: grid;
+    grid-template: 1fr 8fr / 1fr 1fr;
+    gap: 5%;
+    background-color: rgba(0, 0, 0, 0.151);
+    border: 3px solid black;
+    border-radius: 20px;
+    height: 50vh;
+    width: 80%;
+    margin-bottom: 5%;
+    padding: 2%;
+    text-align: center;
+    >div>.weather-title{
+        margin: 0;
+    }
+    >div>div{
+        display:flex;
+        flex-direction: column;
+        >div{
+            background-color: rgba(0, 0, 0, 0.151);
+            height: auto;
+        }
+    }
+    #weather-location{
+        grid-area: 1 / 1 / 1 / -1;
+
+
+        >.location-data-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    #weather-current{
+        grid-area: 2/1/-1/2;
+
+
+    }
+    #weather-condition{
+        grid-area:2/2/-1/-1;
+
+    }
 
 }
 footer{height: 3%; 
     width: 100vw; 
     text-align: center;
     background-color: var(--tertiary-bg-color);
+}
+
+.fill-container{
+    height:100%;
 }

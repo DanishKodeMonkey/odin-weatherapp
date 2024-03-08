@@ -33,17 +33,57 @@
 					weather:
 				</p>
 				<form>
-					<label for="country">Country:</label
-					><input
-						type="text"
-						required /><input
-						type="button"
-						value="Submit" />
+					<div class="input-container">
+						<label for="country">Country:</label
+						><input
+							type="text"
+							id="country"
+							required />
+						<input
+							type="button"
+							value="Submit"
+							id="submit-button" />
+					</div>
 				</form>
 			</div>
 			<div
-				class="weatherData"
-				id="weather"></div>
+				class="weather-data"
+				id="weather">
+				<div id="weather-location">
+					<p class="weather-title">Location:</p>
+					<div class="location-data-container">
+						<div id="weather-country">
+							<p class="weather-data-title">Country:</p>
+						</div>
+						<div id="weather-region">
+							<p class="weather-data-title">Region:</p>
+						</div>
+						<div id="weather-city">
+							<p class="weather-data-title">City:</p>
+						</div>
+					</div>
+				</div>
+				<div id="weather-current">
+					<p class="weather-title">Current weather:</p>
+					<div class="current-weather-container fill-container">
+						<div id="weather-last-updated">
+							<p class="weather-data-title">Last updated:</p>
+						</div>
+						<div id="weather-Temperature">
+							<p class="weather-data-title">Temperature:</p>
+						</div>
+					</div>
+				</div>
+				<div id="weather-condition">
+					<p class="weather-title">Weather condition:</p>
+					<div class="condition-weather-container fill-container">
+						<div id="weather-country">
+							<p class="weather-data-title">Condition:</p>
+						</div>
+						<div id="weather-region"></div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer>
 			Created by Daniel Ljung Runge

@@ -28,6 +28,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
-    "@fontsource-variable/josefin-sans": "^5.0.20"
+    "@fontsource-variable/josefin-sans": "^5.0.20",
+    "@fontsource-variable/noto-serif": "^5.0.5"
   }
 }
