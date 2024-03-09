@@ -59,7 +59,7 @@ function renderWeatherDOM(weatherObj) {
 
 async function fetchWeatherData(location) {
 	const response = await fetch(
-		`http://api.weatherapi.com/v1/current.json?key=639acad64e624798847135255240703&q=${location}`,
+		`https://api.weatherapi.com/v1/current.json?key=639acad64e624798847135255240703&q=${location}`,
 		{ mode: 'cors' }
 	)
 	if (!response.ok) {
