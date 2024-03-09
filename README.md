@@ -7,3 +7,9 @@ In an effort to settle some newly obtained knowledge(at the time of writing) reg
 This exercise will be done using asynchronous programming, API calls and some page styling.
 
 For the weatherdata, I'll be using a free weather-data API called [weather API](https://www.weatherapi.com/docs/)
+
+### How does it work?
+
+The weather app is simple in design and execution. The app accepts a country as an input, and fetches the daata from weather API, the data is then processed, and relevant points taken into a new object.
+
+This object is then used to present the data in a stylish way for the user.
