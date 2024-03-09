@@ -8,6 +8,7 @@ submitBtn.addEventListener('click', async () => {
 	const isHidden = weatherDOM.classList.contains('hidden')
 	if (!isHidden) {
 		toggleWeatherDOM()
+		await new Promise((resolve) => setTimeout(resolve, 500))
 	}
 	await getWeather()
 	toggleWeatherDOM()
