@@ -38,7 +38,8 @@
 						><input
 							type="text"
 							id="country"
-							required />
+							required
+							autofocus />
 						<input
 							type="button"
 							value="Submit"
@@ -47,40 +48,82 @@
 				</form>
 			</div>
 			<div
-				class="weather-data"
+				class="weather-data hidden"
 				id="weather">
-				<div id="weather-location">
+				<div id="weather-location-container">
 					<p class="weather-title">Location:</p>
 					<div class="location-data-container">
 						<div id="weather-country">
 							<p class="weather-data-title">Country:</p>
+							<p
+								class="weather-data-content"
+								id="country-data">
+								#
+							</p>
 						</div>
 						<div id="weather-region">
 							<p class="weather-data-title">Region:</p>
+							<p
+								class="weather-data-content"
+								id="region-data">
+								#
+							</p>
 						</div>
 						<div id="weather-city">
 							<p class="weather-data-title">City:</p>
+							<p
+								class="weather-data-content"
+								id="city-data">
+								#
+							</p>
 						</div>
 					</div>
 				</div>
-				<div id="weather-current">
+				<div
+					id="weather-current-container"
+					class="weather-container">
 					<p class="weather-title">Current weather:</p>
-					<div class="current-weather-container fill-container">
-						<div id="weather-last-updated">
+					<div class="current-weather-container section-container">
+						<div
+							id="weather-last-updated"
+							class="data-container">
 							<p class="weather-data-title">Last updated:</p>
+							<p
+								class="weather-data-content"
+								id="last-updated-data">
+								#
+							</p>
 						</div>
-						<div id="weather-Temperature">
+						<div
+							id="weather-temperature"
+							class="data-container">
 							<p class="weather-data-title">Temperature:</p>
+							<p
+								class="weather-data-temperature"
+								id="temperature-data">
+								#
+							</p>
 						</div>
 					</div>
 				</div>
-				<div id="weather-condition">
+				<div
+					id="weather-condition-container"
+					class="weather-container">
 					<p class="weather-title">Weather condition:</p>
-					<div class="condition-weather-container fill-container">
-						<div id="weather-country">
+					<div class="condition-weather-container section-container">
+						<div
+							id="weather-condition"
+							class="data-container">
 							<p class="weather-data-title">Condition:</p>
+							<p
+								class="weather-data-content"
+								id="condition-data">
+								#
+							</p>
 						</div>
-						<div id="weather-region"></div>
+						<div
+							class="weather-image-container data-container"
+							id="condition-image-container"></div>
 					</div>
 				</div>
 			</div>
