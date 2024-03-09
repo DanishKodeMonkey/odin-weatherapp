@@ -10,8 +10,12 @@ submitBtn.addEventListener('click', async () => {
 		toggleWeatherDOM()
 		await new Promise((resolve) => setTimeout(resolve, 500))
 	}
-	await getWeather()
-	toggleWeatherDOM()
+	try {
+		await getWeather()
+		toggleWeatherDOM()
+	} catch (err) {
+		console.log('Submission error: ', err)
+	}
 })
 // Function handles rendering the weather in DOM
 async function getWeather() {
@@ -21,6 +25,7 @@ async function getWeather() {
 		renderWeatherDOM(weatherObj)
 	} catch (err) {
 		console.log('ERROR getLocatioNWeather', err)
+		throw err
 	}
 }
 function renderWeatherDOM(weatherObj) {
