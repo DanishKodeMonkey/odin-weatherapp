@@ -16,4 +16,4 @@ This object is then used to present the data in a stylish way for the user.
 
 ## Check it out!
 
-Have a look at it youself [here!][https://danishkodemonkey.github.io/odin-weatherapp/]
+Have a look at it youself [here!](https://danishkodemonkey.github.io/odin-weatherapp/)
